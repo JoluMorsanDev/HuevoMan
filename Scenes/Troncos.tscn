@@ -7,59 +7,63 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 220 )
 
-[node name="Troncos" type="StaticBody2D"]
+[node name="Troncos" type="Node2D"]
 
-[node name="Up" type="Sprite" parent="."]
+[node name="Up" type="StaticBody2D" parent="."]
+
+[node name="Up" type="Sprite" parent="Up"]
 position = Vector2( 0, 200 )
 texture = ExtResource( 1 )
 
-[node name="Log" type="Sprite" parent="Up"]
+[node name="Log" type="Sprite" parent="Up/Up"]
 position = Vector2( 0, -80 )
 texture = ExtResource( 3 )
 
-[node name="Log2" type="Sprite" parent="Up"]
+[node name="Log2" type="Sprite" parent="Up/Up"]
 position = Vector2( 0, -160 )
 texture = ExtResource( 3 )
 
-[node name="Log3" type="Sprite" parent="Up"]
+[node name="Log3" type="Sprite" parent="Up/Up"]
 position = Vector2( 0, -240 )
 texture = ExtResource( 3 )
 
-[node name="Log4" type="Sprite" parent="Up"]
+[node name="Log4" type="Sprite" parent="Up/Up"]
 position = Vector2( 0, -320 )
 texture = ExtResource( 3 )
 
-[node name="Log5" type="Sprite" parent="Up"]
+[node name="Log5" type="Sprite" parent="Up/Up"]
 position = Vector2( 0, -400 )
 texture = ExtResource( 3 )
 
-[node name="UpC" type="CollisionShape2D" parent="."]
+[node name="UpC" type="CollisionShape2D" parent="Up"]
 shape = SubResource( 1 )
 
-[node name="Down" type="Sprite" parent="."]
+[node name="Down" type="StaticBody2D" parent="."]
+
+[node name="Down" type="Sprite" parent="Down"]
 position = Vector2( 0, 680 )
 texture = ExtResource( 3 )
 
-[node name="Log" type="Sprite" parent="Down"]
+[node name="Log" type="Sprite" parent="Down/Down"]
 position = Vector2( 0, -80 )
 texture = ExtResource( 3 )
 
-[node name="Log2" type="Sprite" parent="Down"]
+[node name="Log2" type="Sprite" parent="Down/Down"]
 position = Vector2( 0, -160 )
 texture = ExtResource( 3 )
 
-[node name="Log3" type="Sprite" parent="Down"]
+[node name="Log3" type="Sprite" parent="Down/Down"]
 position = Vector2( 0, -240 )
 texture = ExtResource( 3 )
 
-[node name="Log4" type="Sprite" parent="Down"]
+[node name="Log4" type="Sprite" parent="Down/Down"]
 position = Vector2( 0, -320 )
 texture = ExtResource( 3 )
 
-[node name="Log5" type="Sprite" parent="Down"]
+[node name="Log5" type="Sprite" parent="Down/Down"]
 position = Vector2( 0, -400 )
 texture = ExtResource( 2 )
 
-[node name="DownC" type="CollisionShape2D" parent="."]
+[node name="DownC" type="CollisionShape2D" parent="Down"]
 position = Vector2( 0, 480 )
 shape = SubResource( 1 )
