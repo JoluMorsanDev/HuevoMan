@@ -29,12 +29,16 @@ radius = 20.0
 height = 22.5
 
 [node name="Huevoman" type="KinematicBody2D"]
-position = Vector2( 90, 240 )
 script = ExtResource( 4 )
-Pollo = ExtResource( 5 )
+Chicken = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0, 8 )
+color = Color( 0.647059, 0.580392, 0.976471, 1 )
+polygon = PoolVector2Array( -3.5, -3.25, -3.75, 3.5, 3.25, 3.25, 3.25, -2.75 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )

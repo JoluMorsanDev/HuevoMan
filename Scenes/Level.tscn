@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Sprites/Sprite9.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Level.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Huevoman.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Troncos.tscn" type="PackedScene" id=4]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 2 )
+Log = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 9, 6 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Huevoman" parent="." instance=ExtResource( 3 )]
+position = Vector2( 80, 240 )
+
+[node name="LogTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="LogTimer" to="." method="_on_LogTimer_timeout"]
