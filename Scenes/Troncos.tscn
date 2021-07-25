@@ -10,6 +10,7 @@ extents = Vector2( 30, 220 )
 [node name="Troncos" type="Node2D"]
 
 [node name="Up" type="StaticBody2D" parent="."]
+position = Vector2( 0, -60 )
 
 [node name="Up" type="Sprite" parent="Up"]
 position = Vector2( 0, 200 )
@@ -39,6 +40,7 @@ texture = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Down" type="StaticBody2D" parent="."]
+position = Vector2( 0, 60 )
 
 [node name="Down" type="Sprite" parent="Down"]
 position = Vector2( 0, 680 )
