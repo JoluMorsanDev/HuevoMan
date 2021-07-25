@@ -19,6 +19,7 @@ func _ready():
 
 func _input(event):
 	if event is InputEventScreenTouch and event.pressed and clickcooldown == false:
+		var pollo = Pollo.instance()
 		clickcooldown = true
 		target = event.position
 		$AnimatedSprite.animation = "egg"
@@ -32,10 +33,13 @@ func _input(event):
 		else:
 			click_input = lerp(click_input, 1, 1)
 			$AnimatedSprite.flip_h = false
+		add_child(pollo)
+		pollo.target = target
 		yield(get_tree().create_timer(.25),"timeout")
 		if $AnimatedSprite.animation == "egg":
 			$AnimatedSprite.animation = "default"
 		clickcooldown = false
+
 
 func _physics_process(delta):
 	x_input = click_input
