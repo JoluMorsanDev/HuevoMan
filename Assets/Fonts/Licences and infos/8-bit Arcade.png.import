@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite12.png-b25b7f70eb933e7997cd6465c70f42cd.stex"
+path="res://.import/8-bit Arcade.png-5f3b203b0478a1cb15d779e2f2c9e765.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Sprite12.png"
-dest_files=[ "res://.import/Sprite12.png-b25b7f70eb933e7997cd6465c70f42cd.stex" ]
+source_file="res://Assets/Fonts/Licences and infos/8-bit Arcade.png"
+dest_files=[ "res://.import/8-bit Arcade.png-5f3b203b0478a1cb15d779e2f2c9e765.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

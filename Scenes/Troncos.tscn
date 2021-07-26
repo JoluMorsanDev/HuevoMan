@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Sprites/Sprite8.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/Sprite6.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/Sprite7.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/Troncos.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30, 220 )
 
-[node name="Troncos" type="Node2D"]
+[node name="Troncos" type="Node2D" groups=[
+"mob",
+]]
 script = ExtResource( 4 )
 
 [node name="Up" type="StaticBody2D" parent="."]
@@ -74,5 +77,8 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 rect = Rect2( 35, 240, 20, 20 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 250 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]

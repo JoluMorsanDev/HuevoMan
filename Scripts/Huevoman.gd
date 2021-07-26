@@ -10,7 +10,9 @@ var x_input
 onready var target = Vector2()
 onready var click_input
 var clickcooldown = false
-export (PackedScene) var Chicken
+
+signal hit
+signal coin
 
 func _ready():
 	target = global_position
@@ -20,7 +22,6 @@ func _ready():
 func _input(event):
 	if event is InputEventScreenTouch and event.pressed and clickcooldown == false:
 		clickcooldown = true
-		var chicken = Chicken.instance()
 		target = event.position
 		$AnimatedSprite.animation = "egg"
 		if target.y - global_position.y > 0:
@@ -35,13 +36,10 @@ func _input(event):
 			$AnimatedSprite.flip_h = false
 		if $AnimatedSprite.animation == "egg":
 			$AnimatedSprite.animation = "default"
-		add_child(chicken)
-		chicken.linear_velocity = chicken.linear_velocity.rotated($Polygon2D.rotation_degrees)
 		clickcooldown = false
 
 
 func _physics_process(delta):
-	$Polygon2D.look_at(target)
 	if Input.is_action_pressed("ui_accept"):
 # warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
@@ -53,8 +51,19 @@ func _physics_process(delta):
 		motion.x = lerp(motion.x, 0, .02)
 	
 	motion.y += gravity * delta
-	
-	position.x = clamp(position.x, 0, 720)
-	position.y = clamp(position.y, 0, 480)
+#
+#	position.x = clamp(position.x, 0, 720)
+#	position.y = clamp(position.y, 0, 480)
 	
 	motion = move_and_slide(motion, Vector2.UP)
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	emit_signal("hit")
+
+
+func _on_HitArea_body_entered(body):
+	emit_signal("hit")
+
+func _on_CoinArea_area_entered(area):
+	emit_signal("coin")

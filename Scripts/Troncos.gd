@@ -6,7 +6,7 @@ var speed
 func _ready():
 	randomize()
 	speed = rand_range(2.5, 4)
-	global_position.y = rand_range(-120, 120)
+	global_position.y = rand_range(-120, 80)
 
 
 # warning-ignore:unused_argument
