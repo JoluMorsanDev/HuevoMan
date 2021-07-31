@@ -1,6 +1,7 @@
 extends Node2D
 
 var speed
+var aceleration
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,7 +12,7 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _process(delta):
-	global_position.x -= speed
+	global_position.x -= speed * aceleration
 
 
 func _on_VisibilityNotifier2D_screen_entered():

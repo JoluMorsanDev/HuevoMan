@@ -9,10 +9,90 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Reference",
+"class": "BrushPrefabs",
+"language": "GDScript",
+"path": "res://addons/Godoxel/BrushPrefabs.gd"
+}, {
 "base": "HBoxContainer",
 "class": "ContributorClass",
 "language": "GDScript",
 "path": "res://addons/github-integration/scripts/ContributorClass.gd"
+}, {
+"base": "Node",
+"class": "GEAction",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Action.gd"
+}, {
+"base": "GEAction",
+"class": "GEBrighten",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Brighten.gd"
+}, {
+"base": "GEAction",
+"class": "GEBrush",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Brush.gd"
+}, {
+"base": "GEAction",
+"class": "GEBucket",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Bucket.gd"
+}, {
+"base": "Control",
+"class": "GECanvas",
+"language": "GDScript",
+"path": "res://addons/Godoxel/Canvas.gd"
+}, {
+"base": "GEAction",
+"class": "GECut",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Cut.gd"
+}, {
+"base": "GEAction",
+"class": "GEDarken",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Darken.gd"
+}, {
+"base": "Reference",
+"class": "GELayer",
+"language": "GDScript",
+"path": "res://addons/Godoxel/Layer.gd"
+}, {
+"base": "GEAction",
+"class": "GELine",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Line.gd"
+}, {
+"base": "GEAction",
+"class": "GEMultiLine",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/MultiLine.gd"
+}, {
+"base": "GEAction",
+"class": "GEPasteCut",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/PasteCut.gd"
+}, {
+"base": "GEAction",
+"class": "GEPencil",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Pencil.gd"
+}, {
+"base": "GEAction",
+"class": "GERainbow",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Rainbow.gd"
+}, {
+"base": "GEAction",
+"class": "GERect",
+"language": "GDScript",
+"path": "res://addons/Godoxel/actions/Rect.gd"
+}, {
+"base": "Node",
+"class": "GEUtils",
+"language": "GDScript",
+"path": "res://addons/Godoxel/Util.gd"
 }, {
 "base": "PanelContainer",
 "class": "GistItem",
@@ -24,23 +104,61 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/github-integration/scripts/InvitationItem.gd"
 }, {
+"base": "Node",
+"class": "List",
+"language": "GDScript",
+"path": "res://addons/todot/model/List.gd"
+}, {
+"base": "Node",
+"class": "Model",
+"language": "GDScript",
+"path": "res://addons/todot/model/Model.gd"
+}, {
 "base": "PanelContainer",
 "class": "RepositoryItem",
 "language": "GDScript",
 "path": "res://addons/github-integration/scripts/RepositoryItem.gd"
+}, {
+"base": "Node",
+"class": "Task",
+"language": "GDScript",
+"path": "res://addons/todot/model/Task.gd"
 } ]
 _global_script_class_icons={
+"BrushPrefabs": "",
 "ContributorClass": "",
+"GEAction": "",
+"GEBrighten": "",
+"GEBrush": "",
+"GEBucket": "",
+"GECanvas": "",
+"GECut": "",
+"GEDarken": "",
+"GELayer": "",
+"GELine": "",
+"GEMultiLine": "",
+"GEPasteCut": "",
+"GEPencil": "",
+"GERainbow": "",
+"GERect": "",
+"GEUtils": "",
 "GistItem": "",
 "InvitationItem": "",
-"RepositoryItem": ""
+"List": "",
+"Model": "",
+"RepositoryItem": "",
+"Task": ""
 }
 
 [application]
 
 config/name="Huevo Man"
-run/main_scene="res://Scenes/Level.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/MainMenu.tscn"
+boot_splash/image="res://Assets/Sprites/Sprite39.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0.152941, 0.137255, 0.184314, 1 )
+config/icon="res://Assets/Sprites/Sprite1.png"
+config/windows_native_icon="res://Assets/Sprites/Icon.ico"
 
 [autoload]
 
@@ -48,6 +166,7 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+GeneralSingletone="*res://Scripts/GeneralSingletone.gd"
 
 [display]
 
@@ -58,7 +177,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/github-integration/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Godoxel/plugin.cfg", "res://addons/SingletonScriptsShortcut/plugin.cfg", "res://addons/github-integration/plugin.cfg", "res://addons/todot/plugin.cfg" )
 
 [input_devices]
 
@@ -70,4 +189,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/default_clear_color=Color( 0.152941, 0.137255, 0.184314, 1 )
 environment/default_environment="res://default_env.tres"

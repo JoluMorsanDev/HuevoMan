@@ -1,0 +1,533 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Assets/Fonts/m04.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Sprite1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/Sprite31.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/Sprite17.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/Sprite23.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/Sprite9.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/Sprite24.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/Sprite29.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Sprite27.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/Sprite18.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/Sprite28.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/Sprite30.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/Sprite32.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/Sprite26.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/Sprite25.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/Sprite36.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Sprites/Sprite35.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Sprites/Sprite33.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Sprites/Sprite34.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Music/click.wav" type="AudioStream" id=21]
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Credits"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 120 ), Vector2( -360, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 360, 120 ), Vector2( 720, 120 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -120 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( 0, 480 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Credits:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "HowToPlay"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 120 ), Vector2( -360, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 360, 120 ), Vector2( 720, 120 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -120 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( 0, 480 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("HowToPlay:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Pause"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( -360, 120 ), Vector2( 0, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 720, 120 ), Vector2( 360, 120 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, -120 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 480 ), Vector2( 0, 360 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Credits:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("HowToPlay:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Play"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 120 ), Vector2( -360, 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect2:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 360, 120 ), Vector2( 720, 120 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect3:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -120 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect4:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, -2 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( 0, 480 ) ]
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_scale = Vector2( 9, 6 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Label" type="Label" parent="Credits"]
+margin_left = 195.0
+margin_top = 15.0
+margin_right = 531.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.137255, 0.184314, 1 )
+text = "Credits
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Credits"]
+margin_left = 9.07806
+margin_top = 96.4604
+margin_right = 921.078
+margin_bottom = 195.46
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.137255, 0.184314, 1 )
+text = "Code
+ Jolumorsandev"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Credits"]
+margin_left = -118.153
+margin_top = 213.947
+margin_right = 793.847
+margin_bottom = 312.947
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.137255, 0.184314, 1 )
+text = "Art and sounds
+ Jolumorsandev"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Credits"]
+margin_left = -66.7389
+margin_top = 329.342
+margin_right = 845.261
+margin_bottom = 479.342
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.137255, 0.184314, 1 )
+text = "Music
+ Creative
+ Commons"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Credits"]
+margin_left = 37.7976
+margin_top = 10.0794
+margin_right = 117.798
+margin_bottom = 90.0794
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Label" type="Label" parent="HowToPlay"]
+margin_left = 147.423
+margin_top = 28.2542
+margin_right = 675.423
+margin_bottom = 127.254
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.152941, 0.137255, 0.184314, 1 )
+text = "How to play
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="HowToPlay"]
+margin_left = 50.4969
+margin_top = 29.1282
+margin_right = 130.497
+margin_bottom = 109.128
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="TextureRect" parent="."]
+margin_top = 120.0
+margin_right = 360.0
+margin_bottom = 360.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 177.342, 92.8259 )
+texture = ExtResource( 3 )
+
+[node name="CreditsButton" type="TextureButton" parent="ColorRect"]
+margin_left = 52.6813
+margin_top = 125.544
+margin_right = 132.681
+margin_bottom = 205.544
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlayButton" type="TextureButton" parent="ColorRect"]
+margin_left = 232.915
+margin_top = 119.245
+margin_right = 312.915
+margin_bottom = 199.245
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="TextureRect" parent="."]
+margin_left = 360.0
+margin_top = 120.0
+margin_right = 720.0
+margin_bottom = 360.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" type="TextureButton" parent="ColorRect2"]
+margin_left = 81.1732
+margin_top = 81.1732
+margin_right = 161.173
+margin_bottom = 161.173
+toggle_mode = true
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SfxButton" type="TextureButton" parent="ColorRect2"]
+margin_left = 194.709
+margin_top = 76.6783
+margin_right = 274.709
+margin_bottom = 156.678
+toggle_mode = true
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="TextureRect" parent="."]
+margin_right = 720.0
+margin_bottom = 120.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="TextureButton" parent="ColorRect3"]
+margin_left = 311.043
+margin_top = 21.2132
+margin_right = 391.043
+margin_bottom = 101.213
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CloseButton" type="TextureButton" parent="ColorRect3"]
+margin_left = 64.4272
+margin_top = 23.9729
+margin_right = 144.427
+margin_bottom = 103.973
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="TextureRect" parent="."]
+margin_top = 360.0
+margin_right = 720.0
+margin_bottom = 480.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect4"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -304.0
+margin_top = -81.0
+margin_right = 266.0
+margin_bottom = -33.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.45098, 0.443137, 0.988235, 1 )
+text = "Huevo man"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Credits = SubResource( 4 )
+anims/HowToPlay = SubResource( 5 )
+anims/Pause = SubResource( 2 )
+anims/Play = SubResource( 3 )
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -15.0
+bus = "Sfx"
+
+[connection signal="pressed" from="Credits/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="HowToPlay/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="ColorRect/CreditsButton" to="." method="_on_CreditsButton_pressed"]
+[connection signal="pressed" from="ColorRect/HowToPlayButton" to="." method="_on_HowToPlayButton_pressed"]
+[connection signal="pressed" from="ColorRect2/MusicButton" to="." method="_on_MusicButton_pressed"]
+[connection signal="pressed" from="ColorRect2/SfxButton" to="." method="_on_SfxButton_pressed"]
+[connection signal="pressed" from="ColorRect3/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ColorRect3/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

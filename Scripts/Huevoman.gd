@@ -3,8 +3,8 @@ extends KinematicBody2D
 const aceleration = 1024*1.5
 const max_speed = 128*1.5
 const jump_force = 240*1.5
-const gravity = 400*1.5
 
+var gravity 
 onready var motion = Vector2()
 var x_input 
 onready var target = Vector2()
@@ -16,18 +16,23 @@ signal coin
 
 func _ready():
 	target = global_position
-	motion.y = -jump_force
+	motion.y = -jump_force/2
 	click_input = 0
+	gravity = 250
 
 func _input(event):
 	if event is InputEventScreenTouch and event.pressed and clickcooldown == false:
+		gravity = 400*1.5
 		clickcooldown = true
 		target = event.position
 		$AnimatedSprite.animation = "egg"
 		if target.y - global_position.y > 0:
 			motion.y = -jump_force
+			$JumpSound.play()
+			$CPUParticles2D.emitting = true
 		else:
-			motion.y = jump_force 
+			motion.y = jump_force
+			$"Jumpn'tSound".play() 
 		if target.x - global_position.x > 0:
 			click_input = lerp(click_input, -1, 1)
 			$AnimatedSprite.flip_h = true
@@ -40,9 +45,6 @@ func _input(event):
 
 
 func _physics_process(delta):
-	if Input.is_action_pressed("ui_accept"):
-# warning-ignore:return_value_discarded
-		get_tree().reload_current_scene()
 	x_input = click_input
 	if x_input != 0:
 		motion.x += x_input * aceleration * delta 
@@ -62,8 +64,10 @@ func _on_VisibilityNotifier2D_screen_exited():
 	emit_signal("hit")
 
 
+# warning-ignore:unused_argument
 func _on_HitArea_body_entered(body):
 	emit_signal("hit")
 
+# warning-ignore:unused_argument
 func _on_CoinArea_area_entered(area):
 	emit_signal("coin")

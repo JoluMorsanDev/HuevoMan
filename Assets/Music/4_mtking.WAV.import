@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/4_mtking.WAV-5a6ab636a66c6bf3060bf7e3d97b90f6.sample"
+
+[deps]
+
+source_file="res://Assets/Music/4_mtking.WAV"
+dest_files=[ "res://.import/4_mtking.WAV-5a6ab636a66c6bf3060bf7e3d97b90f6.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0
