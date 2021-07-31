@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/Fonts/m04.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
@@ -21,6 +21,14 @@
 [ext_resource path="res://Assets/Sprites/Sprite33.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Sprites/Sprite34.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Music/click.wav" type="AudioStream" id=21]
+[ext_resource path="res://Assets/Sprites/Sprite41.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sprites/Sprite45.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Sprites/Sprite46.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Sprites/Sprite42.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Sprites/Sprite44.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Sprites/Sprite43.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Sprites/Sprite40.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Sprites/Sprite12.png" type="Texture" id=29]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -384,6 +392,76 @@ texture_pressed = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite40" type="Sprite" parent="HowToPlay"]
+position = Vector2( 168.382, 245.543 )
+texture = ExtResource( 28 )
+
+[node name="Sprite12" type="Sprite" parent="HowToPlay"]
+position = Vector2( 62.7906, 161.18 )
+texture = ExtResource( 29 )
+
+[node name="Sprite41" type="Sprite" parent="HowToPlay"]
+position = Vector2( 63.6016, 363.93 )
+texture = ExtResource( 22 )
+
+[node name="Sprite44" type="Sprite" parent="HowToPlay"]
+position = Vector2( 145.252, 316.826 )
+texture = ExtResource( 26 )
+
+[node name="Sprite45" type="Sprite" parent="HowToPlay"]
+position = Vector2( 144.529, 178.523 )
+texture = ExtResource( 23 )
+
+[node name="Sprite46" type="Sprite" parent="HowToPlay"]
+position = Vector2( 263.55, 206.265 )
+texture = ExtResource( 24 )
+
+[node name="Sprite1" type="Sprite" parent="HowToPlay"]
+position = Vector2( 329.715, 168.652 )
+texture = ExtResource( 3 )
+
+[node name="Sprite47" type="Sprite" parent="HowToPlay"]
+position = Vector2( 402.151, 124.601 )
+texture = ExtResource( 26 )
+
+[node name="Sprite48" type="Sprite" parent="HowToPlay"]
+position = Vector2( 263.55, 299.265 )
+texture = ExtResource( 24 )
+
+[node name="Sprite49" type="Sprite" parent="HowToPlay"]
+position = Vector2( 631.246, 311.993 )
+texture = ExtResource( 24 )
+
+[node name="Sprite2" type="Sprite" parent="HowToPlay"]
+position = Vector2( 333.958, 330.948 )
+texture = ExtResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="HowToPlay"]
+position = Vector2( 567.303, 184.208 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Sprite4" type="Sprite" parent="HowToPlay"]
+position = Vector2( 557.404, 341.186 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Sprite43" type="Sprite" parent="HowToPlay"]
+position = Vector2( 491.655, 134.862 )
+texture = ExtResource( 27 )
+
+[node name="Sprite42" type="Sprite" parent="HowToPlay"]
+position = Vector2( 484.583, 409.219 )
+texture = ExtResource( 25 )
+
+[node name="Sprite50" type="Sprite" parent="HowToPlay"]
+position = Vector2( 396.902, 396.491 )
+texture = ExtResource( 23 )
+
+[node name="Sprite51" type="Sprite" parent="HowToPlay"]
+position = Vector2( 635.904, 215.472 )
+texture = ExtResource( 24 )
 
 [node name="ColorRect" type="TextureRect" parent="."]
 margin_top = 120.0
