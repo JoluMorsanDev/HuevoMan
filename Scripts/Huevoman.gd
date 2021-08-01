@@ -25,6 +25,8 @@ func _input(event):
 		gravity = 400*1.5
 		clickcooldown = true
 		target = event.position
+		$Touch.global_position = target
+		$Touch/AnimationPlayer.play("Nueva Animación")
 		$AnimatedSprite.animation = "egg"
 		if target.y - global_position.y > 0:
 			motion.y = -jump_force
